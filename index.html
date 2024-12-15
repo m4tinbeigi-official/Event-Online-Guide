@@ -9,121 +9,189 @@
     <style>
         body {
             font-family: 'Vazir', sans-serif;
+            background-color: #f4f7fc;
+        }
+
+        h1, h2 {
+            font-weight: bold;
+            color: #2b3d4f;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin-top: 50px;
+        }
+
+        .btn {
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-primary, .btn-success {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover, .btn-success:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .card-header {
+            background-color: #007bff;
+            color: white;
+            font-size: 1.5rem;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .card-body {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .section-title {
+            margin-top: 50px;
+            font-size: 1.75rem;
+            color: #333;
+        }
+
+        .section-content {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .footer {
+            background-color: #2b3d4f;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .social-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .form-check-label {
+            font-size: 1.1rem;
+        }
+
+        /* Mobile-friendly */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .section-content {
+                font-size: 0.9rem;
+            }
+
+            .card-header {
+                font-size: 1.2rem;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .social-buttons {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
-<body class="bg-light">
-    <header class="bg-primary text-white text-center py-3">
+<body>
+
+    <header class="bg-primary text-white text-center py-4">
         <h1>راهنمای جامع برگزاری ایونت آنلاین</h1>
     </header>
 
-    <div class="container py-4">
-        <section class="mb-5">
-            <h2 class="text-secondary">مرحله 1: آماده‌سازی تجهیزات</h2>
-            <ul class="list-group">
-                <li class="list-group-item">دو دوربین حرفه‌ای (یکی برای نمای کلی و یکی برای کلوزآپ).</li>
-                <li class="list-group-item">دو میکروفون یقه‌ای بی‌سیم (برای ارائه‌دهنده و دستیار).</li>
-                <li class="list-group-item">یک لپ‌تاپ برای نمایش اسلایدها و پوینتر بی‌سیم.</li>
-                <li class="list-group-item">کارت کپچر (مثل Elgato Cam Link) برای اتصال دوربین‌ها.</li>
-                <li class="list-group-item">دو نور LED پنل حرفه‌ای با پایه تنظیم‌شونده.</li>
-                <li class="list-group-item">لوازم جانبی: کابل HDMI، پاوربانک یا آداپتور برق دوربین، سه‌پایه دوربین.</li>
-            </ul>
-        </section>
-
-        <section class="mb-5">
-            <h2 class="text-secondary">مرحله 2: چیدمان تجهیزات در محل ایونت</h2>
-            <ol class="list-group list-group-numbered">
-                <li class="list-group-item">دوربین‌ها را در زاویه‌های مناسب تنظیم کنید.</li>
-                <li class="list-group-item">نورها را با زاویه ۴۵ درجه از دو طرف تنظیم کنید.</li>
-                <li class="list-group-item">میکروفون‌ها را روی لباس ارائه‌دهنده و دستیار قرار دهید.</li>
-                <li class="list-group-item">لپ‌تاپ و پوینتر را نزدیک ارائه‌دهنده قرار دهید.</li>
-            </ol>
-        </section>
-
-        <section class="mb-5">
-            <h2 class="text-secondary">مرحله 3: اتصال تجهیزات برای استریم و ضبط</h2>
-            <ul class="list-group">
-                <li class="list-group-item">اتصال دوربین‌ها از طریق کارت کپچر به کامپیوتر.</li>
-                <li class="list-group-item">اتصال میکروفون‌ها به ورودی صدا روی کارت کپچر یا کامپیوتر.</li>
-                <li class="list-group-item">نصب و تنظیم OBS Studio: تنظیم صحنه‌ها (Scene 1: نمای کلی، Scene 2: کلوزآپ، Scene 3: نمایش اسلایدها).</li>
-                <li class="list-group-item">تنظیم کیفیت استریم (رزولوشن: 1080p، فریم‌ریت: 30fps، بیت‌ریت: 4000 Kbps).</li>
-                <li class="list-group-item">فعال کردن Virtual Camera در OBS.</li>
-            </ul>
-        </section>
-
-        <section class="mb-5">
-            <h2 class="text-secondary">مرحله 4: تنظیم اسکای‌روم</h2>
-            <ul class="list-group">
-                <li class="list-group-item">ورود به اسکای‌روم و انتخاب کلاس یا وبینار.</li>
-                <li class="list-group-item">تنظیم دوربین و صدا (انتخاب OBS Virtual Camera و تنظیم میکروفون یقه‌ای بی‌سیم).</li>
-                <li class="list-group-item">پخش تصویر و صدای OBS در اسکای‌روم.</li>
-            </ul>
-        </section>
-
-        <section class="mb-5">
-            <h2 class="text-secondary">مرحله 5: تست و اطمینان از عملکرد</h2>
-            <ul class="list-group">
-                <li class="list-group-item">تست کیفیت تصویر و صدا دوربین‌ها.</li>
-                <li class="list-group-item">تست پوینتر و فایل ارائه.</li>
-                <li class="list-group-item">بررسی سرعت اینترنت (حداقل 10 Mbps).</li>
-                <li class="list-group-item">پیش‌نمایش در اسکای‌روم برای بررسی کیفیت تصویر و صدا.</li>
-            </ul>
-        </section>
-
-        <section class="mb-5">
-            <h2 class="text-secondary">مرحله 6: مدیریت ایونت در حین اجرا</h2>
-            <ul class="list-group">
-                <li class="list-group-item">کنترل OBS و سوئیچ بین صحنه‌ها (نمای کلی، کلوزآپ، یا اسلاید).</li>
-                <li class="list-group-item">هماهنگی با ارائه‌دهنده و اطمینان از عملکرد درست پوینتر.</li>
-                <li class="list-group-item">پاسخگویی به سوالات و مشکلات کاربران در اسکای‌روم.</li>
-            </ul>
-        </section>
-
-        <section class="mb-5">
-            <h2 class="text-secondary">مرحله 7: بعد از ایونت</h2>
-            <ul class="list-group">
-                <li class="list-group-item">بررسی فایل ضبط‌شده (کیفیت تصویر و صدا).</li>
-                <li class="list-group-item">جمع‌آوری بازخورد از کاربران برای ایونت‌های بعدی.</li>
-            </ul>
-        </section>
-
-        <section class="mb-5">
-            <h2 class="text-secondary">چک‌لیست سریع برای روز ایونت</h2>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="check1">
-                <label class="form-check-label" for="check1">تست کامل دوربین‌ها، میکروفون‌ها و نورپردازی</label>
+    <div class="container">
+        <section class="card">
+            <div class="card-header">
+                <h2>مرحله 1: آماده‌سازی تجهیزات</h2>
             </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="check2">
-                <label class="form-check-label" for="check2">بررسی اتصال OBS به اسکای‌روم</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="check3">
-                <label class="form-check-label" for="check3">بررسی عملکرد پوینتر و فایل ارائه</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="check4">
-                <label class="form-check-label" for="check4">سرعت اینترنت و مودم پشتیبان را چک کن</label>
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item">دو دوربین حرفه‌ای (یکی برای نمای کلی و یکی برای کلوزآپ).</li>
+                    <li class="list-group-item">دو میکروفون یقه‌ای بی‌سیم (برای ارائه‌دهنده و دستیار).</li>
+                    <li class="list-group-item">یک لپ‌تاپ برای نمایش اسلایدها و پوینتر بی‌سیم.</li>
+                    <li class="list-group-item">کارت کپچر (مثل Elgato Cam Link) برای اتصال دوربین‌ها.</li>
+                    <li class="list-group-item">دو نور LED پنل حرفه‌ای با پایه تنظیم‌شونده.</li>
+                    <li class="list-group-item">لوازم جانبی: کابل HDMI، پاوربانک یا آداپتور برق دوربین، سه‌پایه دوربین.</li>
+                </ul>
             </div>
         </section>
 
-        <section class="mb-5">
-            <h2 class="text-secondary">دانلود OBS Studio</h2>
-            <p>برای دانلود نرم‌افزار OBS Studio می‌توانید از لینک زیر استفاده کنید:</p>
-            <a href="https://B2n.ir/obs-studio" class="btn btn-success" target="_blank">دانلود OBS Studio</a>
+        <section class="card">
+            <div class="card-header">
+                <h2>مرحله 2: چیدمان تجهیزات در محل ایونت</h2>
+            </div>
+            <div class="card-body">
+                <ol class="list-group list-group-numbered">
+                    <li class="list-group-item">دوربین‌ها را در زاویه‌های مناسب تنظیم کنید.</li>
+                    <li class="list-group-item">نورها را با زاویه ۴۵ درجه از دو طرف تنظیم کنید.</li>
+                    <li class="list-group-item">میکروفون‌ها را روی لباس ارائه‌دهنده و دستیار قرار دهید.</li>
+                    <li class="list-group-item">لپ‌تاپ و پوینتر را نزدیک ارائه‌دهنده قرار دهید.</li>
+                </ol>
+            </div>
         </section>
 
-        <section class="mb-5">
-            <h2 class="text-secondary">اشتراک‌گذاری در توییتر</h2>
-            <p>برای اشتراک‌گذاری این صفحه در توییتر و معرفی راهنمای ایونت آنلاین، روی دکمه زیر کلیک کنید:</p>
-            <a href="https://twitter.com/intent/tweet?text=%D8%B1%D8%A7%D9%87%D9%86%D9%85%D8%A7%DB%8C+%D8%AC%D8%A7%D9%85%D8%B9+%D8%A8%D8%B1%DA%AF%D8%B2%D8%A7%D8%B1%DB%8C+%D8%A7%DB%8C%D9%88%D9%86%D8%AA+%D8%A2%D9%86%D9%84%D8%A7%DB%8C%D9%86+%D8%A8%D8%A7+%D9%84%DB%8C%D9%86%DA%A9+%D9%87%D8%AF%D9%81+%D9%88+%D9%85%D9%86%D8%B4%D9%86+%D8%B1%DB%8C%DA%A9+%D8%B3%D8%A7%D9%86%DA%86%D8%B2+%D8%AF%D8%B1+%D8%AA%D9%88%DB%8C%DB%8C%D8%AA%D8%B1&url=https%3A%2F%2FB2n.ir%2FEvent-Online-Guide&via=RickSanchez" class="btn btn-primary" target="_blank">اشتراک‌گذاری در توییتر</a>
+        <section class="card">
+            <div class="card-header">
+                <h2>مرحله 3: اتصال تجهیزات برای استریم و ضبط</h2>
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item">اتصال دوربین‌ها از طریق کارت کپچر به کامپیوتر.</li>
+                    <li class="list-group-item">اتصال میکروفون‌ها به ورودی صدا روی کارت کپچر یا کامپیوتر.</li>
+                    <li class="list-group-item">نصب و تنظیم OBS Studio: تنظیم صحنه‌ها (Scene 1: نمای کلی، Scene 2: کلوزآپ، Scene 3: نمایش اسلایدها).</li>
+                    <li class="list-group-item">تنظیم کیفیت استریم (رزولوشن: 1080p، فریم‌ریت: 30fps، بیت‌ریت: 4000 Kbps).</li>
+                    <li class="list-group-item">فعال کردن Virtual Camera در OBS.</li>
+                </ul>
+            </div>
         </section>
 
+        <section class="card">
+            <div class="card-header">
+                <h2>دانلود OBS Studio</h2>
+            </div>
+            <div class="card-body">
+                <p>برای دانلود نرم‌افزار OBS Studio می‌توانید از لینک زیر استفاده کنید:</p>
+                <a href="https://B2n.ir/obs-studio" class="btn btn-success" target="_blank">دانلود OBS Studio</a>
+            </div>
+        </section>
+
+        <section class="card">
+            <div class="card-header">
+                <h2>اشتراک‌گذاری در توییتر</h2>
+            </div>
+            <div class="card-body">
+                <p>برای اشتراک‌گذاری این صفحه در توییتر و معرفی راهنمای ایونت آنلاین، روی دکمه زیر کلیک کنید:</p>
+                <a href="https://twitter.com/intent/tweet?text=%D8%B1%D8%A7%D9%87%D9%86%D9%85%D8%A7%DB%8C+%D8%AC%D8%A7%D9%85%D8%B9+%D8%A8%D8%B1%DA%AF%D8%B2%D8%A7%D8%B1%DB%8C+%D8%A7%DB%8C%D9%88%D9%86%D8%AA+%D8%A2%D9%86%D9%84%D8%A7%DB%8C%D9%86+%D8%A8%D8%A7+%D9%84%DB%8C%D9%86%DA%A9+%D9%87%D8%AF%D9%81+%D9%88+%D9%85%D9%86%D8%B4%D9%86+%D8%B1%DB%8C%DA%A9+%D8%B3%D8%A7%D9%86%DA%86%D8%B2+%D8%AF%D8%B1+%D8%AA%D9%88%DB%8C%DB%8C%D8%AA%D8%B1&url=https%3A%2F%2FB2n.ir%2FEvent-Online-Guide&via=m4tinbeigi" class="btn btn-primary" target="_blank">اشتراک‌گذاری در توییتر</a>
+            </div>
+        </section>
     </div>
 
-    <footer class="bg-dark text-white text-center py-3">
-        <p>تمامی حقوق محفوظ است</p>
-    </footer>
+<footer class="footer">
+    <p>ساخته شده توسط <a href="https://twitter.com/m4tinbeigi" target="_blank" class="text-white fw-bold">ریک سانچز</a> با حمایت <a href="https://www.eseminar.tv" target="_blank" class="text-white fw-bold">ایسمینار</a></p>
+</footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
